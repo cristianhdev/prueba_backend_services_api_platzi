@@ -1,0 +1,18 @@
+[
+  {
+    "id": "validate-post-user",
+    "uri": "build/resources/test/features/users/errors_post_user.feature",
+    "name": "Validate post user",
+    "description": "",
+    "keyword": "Feature",
+    "line": 2,
+    "tags": [
+      {
+        "name": "@ValidateInputsPost",
+        "line": 2
+      }
+    ],
+    "elements": [
+    ]
+  }
+]

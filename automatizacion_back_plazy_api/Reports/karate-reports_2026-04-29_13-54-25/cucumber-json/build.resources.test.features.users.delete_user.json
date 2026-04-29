@@ -1,0 +1,79 @@
+[
+  {
+    "id": "delete-user-by-id",
+    "uri": "build/resources/test/features/users/delete_user.feature",
+    "name": "Delete user by Id",
+    "description": "",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "id": "delete-user-by-id;delete-user-by-id-doesn-t-exist",
+        "name": "Delete user by id  doesn't exist",
+        "description": "",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@DeleterUserByIdNotDoesntExist",
+            "line": 25
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "url baseUrl",
+            "line": 20,
+            "result": {
+              "status": "passed",
+              "duration": 1151400
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "path 'users', 100000",
+            "line": 21,
+            "result": {
+              "status": "passed",
+              "duration": 2422100
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "method GET",
+            "line": 22,
+            "result": {
+              "status": "passed",
+              "duration": 1414724700
+            },
+            "embeddings": [
+              {
+                "mime_type": "text/plain",
+                "data": "G1sxbXJlcXVlc3Q6G1swbQobWzJtMSA+IBtbMG0bWzM2bRtbMW1HRVQbWzBtIGh0dHBzOi8vYXBpLmVzY3VlbGFqcy5jby9hcGkvdjEvdXNlcnMvMTAwMDAwChtbMm0xID4gG1swbRtbMzZtSG9zdBtbMG06IGFwaS5lc2N1ZWxhanMuY28KG1sybTEgPiAbWzBtG1szNm1Db25uZWN0aW9uG1swbToga2VlcC1hbGl2ZQobWzJtMSA+IBtbMG0bWzM2bVVzZXItQWdlbnQbWzBtOiBBcGFjaGUtSHR0cENsaWVudC81LjYgKEphdmEvMjEuMC4xMCkKChtbMm1yZXNwb25zZSB0aW1lIGluIG1pbGxpc2Vjb25kczogMjA3G1swbQobWzJtMSA8IBtbMG0bWzMxbRtbMW00MDAbWzBtIBtbMzZtR0VUG1swbSAvYXBpL3YxL3VzZXJzLzEwMDAwMAobWzJtMSA8IBtbMG0bWzM2bU9yaWdpbi1BZ2VudC1DbHVzdGVyG1swbTogPzEKG1sybTEgPCAbWzBtG1szNm1YLURucy1QcmVmZXRjaC1Db250cm9sG1swbTogb2ZmChtbMm0xIDwgG1swbRtbMzZtU2VydmVyG1swbTogSGVyb2t1ChtbMm0xIDwgG1swbRtbMzZtQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luG1swbTogKgobWzJtMSA8IBtbMG0bWzM2bVgtQ29udGVudC1UeXBlLU9wdGlvbnMbWzBtOiBub3NuaWZmChtbMm0xIDwgG1swbRtbMzZtWC1Eb3dubG9hZC1PcHRpb25zG1swbTogbm9vcGVuChtbMm0xIDwgG1swbRtbMzZtQ3Jvc3MtT3JpZ2luLU9wZW5lci1Qb2xpY3kbWzBtOiBzYW1lLW9yaWdpbgobWzJtMSA8IBtbMG0bWzM2bVJlcG9ydGluZy1FbmRwb2ludHMbWzBtOiBoZXJva3UtbmVsPSJodHRwczovL25lbC5oZXJva3UuY29tL3JlcG9ydHM/cz1TUmgyUGdrQXpqeFpEcXhtd0VFZnE5S1YzRFhHYkJVOU9DNU52dW0xM0swJTNEJnNpZD1jNDZlZmU5Yi1kM2QyLTRhMGMtOGM3Ni1iZmFmYTE2YzVhZGQmdHM9MTc3NzQ4ODg2NiIKG1sybTEgPCAbWzBtG1szNm1YLVBlcm1pdHRlZC1Dcm9zcy1Eb21haW4tUG9saWNpZXMbWzBtOiBub25lChtbMm0xIDwgG1swbRtbMzZtRGF0ZRtbMG06IFdlZCwgMjkgQXByIDIwMjYgMTg6NTQ6MjYgR01UChtbMm0xIDwgG1swbRtbMzZtVmlhG1swbTogMS4xIGhlcm9rdS1yb3V0ZXIKG1sybTEgPCAbWzBtG1szNm1SZWZlcnJlci1Qb2xpY3kbWzBtOiBuby1yZWZlcnJlcgobWzJtMSA8IBtbMG0bWzM2bVgtRnJhbWUtT3B0aW9ucxtbMG06IFNBTUVPUklHSU4KG1sybTEgPCAbWzBtG1szNm1TdHJpY3QtVHJhbnNwb3J0LVNlY3VyaXR5G1swbTogbWF4LWFnZT0zMTUzNjAwMDsgaW5jbHVkZVN1YkRvbWFpbnMKG1sybTEgPCAbWzBtG1szNm1FdGFnG1swbTogVy8iYmQtd3p2S2lTRjhrNmFaL1VaOXlOZ0hZOU5rRnBNIgobWzJtMSA8IBtbMG0bWzM2bU5lbBtbMG06IHsicmVwb3J0X3RvIjoiaGVyb2t1LW5lbCIsInJlc3BvbnNlX2hlYWRlcnMiOlsiVmlhIl0sIm1heF9hZ2UiOjM2MDAsInN1Y2Nlc3NfZnJhY3Rpb24iOjAuMDEsImZhaWx1cmVfZnJhY3Rpb24iOjAuMX0KG1sybTEgPCAbWzBtG1szNm1SZXBvcnQtVG8bWzBtOiB7Imdyb3VwIjoiaGVyb2t1LW5lbCIsImVuZHBvaW50cyI6W3sidXJsIjoiaHR0cHM6Ly9uZWwuaGVyb2t1LmNvbS9yZXBvcnRzP3M9U1JoMlBna0F6anhaRHF4bXdFRWZxOUtWM0RYR2JCVTlPQzVOdnVtMTNLMCUzRFx1MDAyNnNpZD1jNDZlZmU5Yi1kM2QyLTRhMGMtOGM3Ni1iZmFmYTE2YzVhZGRcdTAwMjZ0cz0xNzc3NDg4ODY2In1dLCJtYXhfYWdlIjozNjAwfQobWzJtMSA8IBtbMG0bWzM2bUNvbnRlbnQtU2VjdXJpdHktUG9saWN5G1swbTogc2NyaXB0LXNyYyAnc2VsZicgJ3Vuc2FmZS1pbmxpbmUnIGh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldDtpbWctc3JjICdzZWxmJyBkYXRhOiBodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQ7ZGVmYXVsdC1zcmMgJ3NlbGYnO2Jhc2UtdXJpICdzZWxmJztmb250LXNyYyAnc2VsZicgaHR0cHM6IGRhdGE6O2Zvcm0tYWN0aW9uICdzZWxmJztmcmFtZS1hbmNlc3RvcnMgJ3NlbGYnO29iamVjdC1zcmMgJ25vbmUnO3NjcmlwdC1zcmMtYXR0ciAnbm9uZSc7c3R5bGUtc3JjICdzZWxmJyBodHRwczogJ3Vuc2FmZS1pbmxpbmUnO3VwZ3JhZGUtaW5zZWN1cmUtcmVxdWVzdHMKG1sybTEgPCAbWzBtG1szNm1YLVhzcy1Qcm90ZWN0aW9uG1swbTogMAobWzJtMSA8IBtbMG0bWzM2bUNyb3NzLU9yaWdpbi1SZXNvdXJjZS1Qb2xpY3kbWzBtOiBzYW1lLW9yaWdpbgobWzJtMSA8IBtbMG0bWzM2bUNvbnRlbnQtTGVuZ3RoG1swbTogMTg5ChtbMm0xIDwgG1swbRtbMzZtQ29udGVudC1UeXBlG1swbTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOAp7InBhdGgiOiIvYXBpL3YxL3VzZXJzLzEwMDAwMCIsInRpbWVzdGFtcCI6IjIwMjYtMDQtMjlUMTg6NTQ6MjYuMDM2WiIsIm5hbWUiOiJFbnRpdHlOb3RGb3VuZEVycm9yIiwibWVzc2FnZSI6IkNvdWxkIG5vdCBmaW5kIGFueSBlbnRpdHkgb2YgdHlwZSBcIlVzZXJcIiBtYXRjaGluZzoge1xuICAgIFwiaWRcIjogMTAwMDAwXG59In0KCkdFVCBodHRwczovL2FwaS5lc2N1ZWxhanMuY28vYXBpL3YxL3VzZXJzLzEwMDAwMAo0MDAgKDIwNyBtcykK"
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "status 400",
+            "line": 23,
+            "result": {
+              "status": "passed",
+              "duration": 21700
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "match response.message contains 'Could not find'",
+            "line": 24,
+            "result": {
+              "status": "passed",
+              "duration": 5109300
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
