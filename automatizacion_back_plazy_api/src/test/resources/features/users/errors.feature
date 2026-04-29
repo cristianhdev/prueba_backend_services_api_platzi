@@ -1,13 +1,15 @@
-@ValidateInputsPost
-Feature: Validate post user
+@ValidateUserErrors
+Feature: Validate user
 
+
+  Background:
+    * url baseUrl
 
   @EmailInputValidate
   Scenario Outline: Validate that the email field when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
-    Given url baseUrl
-    And path 'users'
+    Given path 'users'
     *  userData.email = '<email>'
     When request userData
     When method POST
@@ -23,8 +25,7 @@ Feature: Validate post user
   Scenario Outline: Validate the password field when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
-    Given url baseUrl
-    And path 'users'
+    Given path 'users'
     *  userData.password = '<password>'
     When request userData
     When method POST
@@ -35,3 +36,15 @@ Feature: Validate post user
       | 123                | password must be longer than or equal to 4 characters |
       |                    | password should not be empty                          |
       | !"#$%&/(?=¡¿)_[¨*] | password must contain only letters and numbers        |
+
+  @DeleterUserByIdNotDoesntExist
+  #Delete User by id doesn't exist
+  Scenario Outline: Delete user by id  doesn't exist
+
+    Given path 'users', <id>
+    When method GET
+    Then status 400
+    And match response.message contains 'Could not find'
+    Examples:
+      | id     |
+      | 100000 |

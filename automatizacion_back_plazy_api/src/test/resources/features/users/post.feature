@@ -3,11 +3,12 @@ Feature: Create user
   @CreateNewUser
   #Create User
   Scenario: Create user success
+    * url baseUrl
     * def userData =  read('classpath:data/users/user-data.json')
     * def userSchema =  read('classpath:schemas/users/user-schema.json')
 
-    Given url baseUrl
-    And path 'users'
+
+    Given path 'users'
     And request userData
     When method POST
     Then status 201
