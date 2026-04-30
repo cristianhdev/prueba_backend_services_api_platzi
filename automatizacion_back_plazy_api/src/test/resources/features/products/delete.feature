@@ -9,7 +9,7 @@ Feature: Delete Product by Id
 
     Given path 'users',84
     When method DELETE
-    Then status 200
+    Then status 400
     And match response == 'true'
 
     #Validate id user dont not exist

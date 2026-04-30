@@ -11,7 +11,7 @@ public class TestRunnerUser {
         String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 
         Runner.path("classpath:features/users")
-                 .tags("@PasswordInputValid")
+                 .tags("@UpdateUser")
                 .outputDir("Reports/karate-reports_" + timestamp)
                 .outputCucumberJson(true)
                 .parallel(3);
