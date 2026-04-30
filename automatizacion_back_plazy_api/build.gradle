@@ -13,6 +13,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'io.karatelabs:karate-core:2.0.0'
+    testImplementation 'net.masterthought:cucumber-reporting:5.7.0'
 }
 
 test {
