@@ -5,7 +5,7 @@
   "price": "#number",
   "description": "#string",
   "category": {
-    "id": "#number",
+    "id": 1,
     "name": "#string",
     "slug": "#string",
     "image": "#string",
