@@ -3,7 +3,7 @@ Feature: Create categorie
   @CreateNewCategories
   Scenario: Create categorie success
     * url baseUrl
-    * def categorieData = call read('classpath:helpers/create-categorie.feature')
+    * def categorieData = call read('classpath:helpers/categories/create-categorie.feature')
     * def categorieSchema = read('classpath:schemas/categories/categories-schema.json')
 
     Given path 'categories'

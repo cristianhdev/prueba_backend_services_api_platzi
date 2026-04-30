@@ -1,0 +1,10 @@
+[
+  {
+    "email": "testcorreo.com",
+    "message": "email must be an email"
+  },
+  {
+    "email": "",
+    "message": "email should not be empty"
+  }
+]

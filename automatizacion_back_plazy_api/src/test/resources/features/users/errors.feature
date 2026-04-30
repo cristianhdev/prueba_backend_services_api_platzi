@@ -6,7 +6,7 @@ Feature: Validate user
     * url baseUrl
 
   @EmailInputValidate
-  Scenario Outline: Validate that the email field when creating a user account
+  Scenario Outline: Validate that the  <message>  when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
     Given path 'users'
@@ -16,13 +16,11 @@ Feature: Validate user
     And status 400
     And match response.message contains '<message>'
     Examples:
-      | email          | message                   |
-      | testcorreo.com | email must be an email    |
-      |                | email should not be empty |
+      | read('classpath:data/users/error-email-data.json') |
 
 
   @PasswordInputValid
-  Scenario Outline: Validate the password field when creating a user account
+  Scenario Outline: Validate the <message> when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
     Given path 'users'
@@ -32,10 +30,7 @@ Feature: Validate user
     And status 400
     And match response.message contains '<message>'
     Examples:
-      | password           | message                                               |
-      | 123                | password must be longer than or equal to 4 characters |
-      |                    | password should not be empty                          |
-      | !"#$%&/(?=¡¿)_[¨*] | password must contain only letters and numbers        |
+      | read('classpath:data/users/error-password-data.json') |  |
 
   @DeleterUserByIdNotDoesntExist
   #Delete User by id doesn't exist

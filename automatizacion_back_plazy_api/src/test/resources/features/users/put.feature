@@ -6,7 +6,7 @@ Feature: Update user by id
     * url baseUrl
     * def response = call read('classpath:features/users/post.feature')
     * def IdUser = response.IdUser
-
+    * karate.log("Response", IdUser)
     * def userSchema =  read('classpath:schemas/users/user-schema.json')
 
     Given path 'users',IdUser

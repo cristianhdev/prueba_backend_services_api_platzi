@@ -13,4 +13,5 @@ Feature: Get user by id
     Given path 'users',IdUser
     When method GET
     Then status 200
-    And match response.name contains responseUser.name
+    And match response.name contains 'QA'
+

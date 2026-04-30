@@ -4,7 +4,7 @@ Feature: Update categorie by id
   #Update Categorie
   Scenario: Update categorie success
     * url baseUrl
-    * def categorieData = call read('classpath:helpers/create-categorie.feature')
+    * def categorieData = call read('classpath:helpers/categories/create-categorie.feature')
     * def response = call read('classpath:features/categories/post.feature')
     * def IdCategorie = response.IdCategorie
 

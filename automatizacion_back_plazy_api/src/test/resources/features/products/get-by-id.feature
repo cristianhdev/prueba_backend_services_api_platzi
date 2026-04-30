@@ -1,0 +1,15 @@
+Feature: Get product by id
+
+
+  Background:
+    * url baseUrl
+
+  @GetProductById
+  #Get Product by ID
+  Scenario: Get product by id success
+
+    Given path 'products',85
+    When method GET
+    Then status 200
+    And match response.title contains 'iPhone 90.43450444310218705'
+
