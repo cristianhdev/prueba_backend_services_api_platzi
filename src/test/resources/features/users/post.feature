@@ -14,7 +14,7 @@ Feature: Create user
     When method POST
     Then status 201
     And match response ==  userSchema
-    And match response.name contains 'QA'
+    And match response.name contains userData.Name
 
     * def IdUser = response.id
     * def UserName = response.name
