@@ -3,7 +3,7 @@ Feature: Delete user by Id
   Background:
     * url baseUrl
 
-  @deleteuserbyid
+  @delete-user-by-id
   #Delete User by ID
   Scenario: Delete user by id
     * def response = call read('classpath:features/users/post.feature')

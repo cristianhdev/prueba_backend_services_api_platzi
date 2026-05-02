@@ -1,7 +1,7 @@
 Feature: Get list categories
 
         #Get List All categories
-  @getallcategories
+  @get-all-categories
   Scenario: Get list categories
     * def categorieSchema =  read('classpath:schemas/categories/categories-schema.json')
     Given url baseUrl
@@ -11,7 +11,7 @@ Feature: Get list categories
     And match each response == categorieSchema
 
   #Get List All Categories By Slug
-  @getcategoriesbyslug
+  @get-categories-by-slug
   Scenario Outline: Get list by slug categories
     * def categorieSchema =  read('classpath:schemas/categories/categories-schema.json')
     Given url baseUrl

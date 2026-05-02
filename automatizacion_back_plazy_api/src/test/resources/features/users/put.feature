@@ -1,6 +1,6 @@
 Feature: Update user by id
 
-  @updateuser
+  @update-user
   #Update User
   Scenario: Update User success
     * url baseUrl

@@ -4,7 +4,7 @@ Feature: Filters By Price Products
     * url baseUrl
 
 
-  @filterfindbyprice
+  @filter-find-by-price
   Scenario Outline: Validate find product by price '<price>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -21,7 +21,7 @@ Feature: Filters By Price Products
       | price |
       | 73    |
 
-  @filterfindbypricenotproductexist
+  @filter-find-by-price-not-product-exist
   Scenario Outline: Validate find product by price '<price>', product not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 

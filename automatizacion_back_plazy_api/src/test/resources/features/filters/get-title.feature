@@ -3,7 +3,7 @@ Feature: Filters By Title Products
     Background:
       * url baseUrl
 
- @filterfindbytitle
+ @filter-find-by-title
   Scenario Outline: Validate find product by title '<title>'
    * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -19,7 +19,7 @@ Feature: Filters By Title Products
      | read('classpath:data/filters/filter-title-data.json') |  |
 
 
-  @filterfindbytitlenotexist
+  @filter-find-by-title-not-exist
   Scenario Outline: Validate find product by title '<title>' not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 

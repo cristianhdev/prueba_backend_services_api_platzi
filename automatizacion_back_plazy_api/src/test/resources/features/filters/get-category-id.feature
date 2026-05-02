@@ -3,7 +3,7 @@ Feature: Filters Category By Id Products
   Background:
     * url baseUrl
 
-  @filterbycategotyid
+  @filter-by-categoty-id
   Scenario Outline: Validate find product by cagtegory id '<id>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -20,7 +20,7 @@ Feature: Filters Category By Id Products
       | id |
       | 4  |
 
-  @filterfindbycategoryidnotexist
+  @filter-find-by-category-id-not-exist
   Scenario Outline: Validate find product by cagtegory id '<id>' not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 

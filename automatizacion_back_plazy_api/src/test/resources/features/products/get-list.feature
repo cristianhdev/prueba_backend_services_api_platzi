@@ -1,7 +1,7 @@
 Feature: Get list products
 
         #Get List All products
-  @getallproducts
+  @get-all-products
   Scenario: Get list products
     * def productsSchema =  read('classpath:schemas/products/products-schema.json')
     Given url baseUrl

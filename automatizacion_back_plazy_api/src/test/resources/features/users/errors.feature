@@ -1,11 +1,11 @@
 @ValidateUserErrors
-Feature: Validate user
+Feature: Validate errors user
 
 
   Background:
     * url baseUrl
 
-  @emailinputvalidate
+  @email-input-validate
   Scenario Outline: Validate that the  <message>  when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
@@ -19,7 +19,7 @@ Feature: Validate user
       | read('classpath:data/users/error-email-data.json') |
 
 
-  @passwordinputvalid
+  @password-input-valid
   Scenario Outline: Validate the <message> when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 

@@ -5,7 +5,7 @@ Feature: Filters By Price Range Products
 
 
 
-  @filterfindfypricerangetop
+  @filter-find-by-price-range-top
   Scenario Outline: Validate find product by price range min '<price_min>' and max '<price_mmax>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -22,7 +22,7 @@ Feature: Filters By Price Range Products
       | price_min | price_max |
       | 99999     | 0         |
 
-  @filterfindbypricerangebordernegative
+  @filter-find-by-price-range-border-negative
   Scenario Outline: Validate find product by price range min '<price_min>' and max '<price_max>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -39,7 +39,7 @@ Feature: Filters By Price Range Products
       | 9999      | -1        |
 
 
-  @filterfindbypricerangeborder
+  @filter-find-by-price-range-border
   Scenario Outline: Validate find product by price range max '<price_min>' and min '<price_max>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -61,7 +61,7 @@ Feature: Filters By Price Range Products
       | 73        | 90        |
       | 72        | 91        |
 
-  @filterfindbypricerangecross
+  @filter-find-by-price-range-cross
   Scenario Outline: Validate find product by price range max '<price_min>' and min '<price_max>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -77,5 +77,5 @@ Feature: Filters By Price Range Products
     And match filtered.length == 0
 
     Examples:
-      | price_min | price_max |
-      | 99999999  | 100000000 |
+      | price_min     | price_max      |
+      | 9999999999999 | 10000000000000 |

@@ -4,7 +4,7 @@ Feature: Validate categories
   Background:
     * url baseUrl
 
-  @getcategoriebyslugnotdoesntexist
+  @get-categorie-by-slug-not-doesnt-exist
   #Get Categorie by Slug doesn't exist
   Scenario Outline: Get categorie by slug  doesn't exist
 
@@ -17,7 +17,7 @@ Feature: Validate categories
       | slug |
       | TV   |
 
-  @getcategoriebyidnotdoesntexist
+  @get-categorie-by-id-not-doesnt-exist
   #Get Categorie by id doesn't exist
   Scenario Outline: Get categorie by id  doesn't exist
 
@@ -29,7 +29,7 @@ Feature: Validate categories
       | id   |
       | 1099 |
 
-  @deletecategoriebyidnotdoesntexist
+  @delete-categorie-by-id-not-doesnt-exist
   #Delete Categorie by id doesn't exist
   Scenario Outline: Delete categorie by id  doesn't exist
 

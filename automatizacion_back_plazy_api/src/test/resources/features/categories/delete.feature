@@ -3,7 +3,7 @@ Feature: Delete Categorie by Id
   Background:
     * url baseUrl
 
-  @deleteategoriebyid
+  @delete-categorie-by-id
   #Delete Categorie by ID
   Scenario: Delete categorie by id
     * def response = call read('classpath:features/categories/post.feature')
