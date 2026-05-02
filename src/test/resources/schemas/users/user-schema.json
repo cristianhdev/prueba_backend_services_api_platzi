@@ -1,6 +1,6 @@
 {
     "id": "#number",
-    "email": "#string",
+    "email": "#regex .+@.+",
     "password": "#string",
     "name": "#string",
     "role": "#string",

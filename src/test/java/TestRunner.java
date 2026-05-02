@@ -23,7 +23,7 @@ public class TestRunner {
 
         // Ejecutar features
         SuiteResult results = Runner.path("classpath:features")
-                //.tags("@header-content-post")
+                //.tags("@delete-user-by-id")
                 .outputDir("Reports/karate-reports_" + timestamp)
                 .outputCucumberJson(true)
                 .parallel(3);

@@ -13,3 +13,5 @@ Feature: Generate Ramdom User
         "avatar": "https://api.lorem.space/image/face?w=640&h=480"
       }
       """
+
+      * def Name = user.name
