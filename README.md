@@ -5,6 +5,12 @@
 ./gradlew clean test
 ```
 
+### - Reportes en directorio:
+```bash
+./cucumber-html-reports
+```
+
+
 
 ## 🏷️ Tags disponibles
 
