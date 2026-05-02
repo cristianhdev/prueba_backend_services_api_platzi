@@ -16,5 +16,6 @@ Feature: Create categorie
 
     * def IdCategorie = response.id
     * def CategorieName = response.name
+    * def CategorieSlug = response.slug
 
 

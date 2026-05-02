@@ -23,7 +23,7 @@ public class TestRunner {
 
         // Ejecutar features
         SuiteResult results = Runner.path("classpath:features")
-                //.tags("@FilterFindByPriceRange")
+                //.tags("@get-product-by-id")
                 .outputDir("Reports/karate-reports_" + timestamp)
                 .outputCucumberJson(true)
                 .parallel(3);

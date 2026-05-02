@@ -16,3 +16,4 @@ Feature: Create product
     And match response.title contains productData.title
 
     * def IdProduct = response.id
+    * def TitleProduct = response.title

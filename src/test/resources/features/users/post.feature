@@ -17,5 +17,6 @@ Feature: Create user
     And match response.name contains 'QA'
 
     * def IdUser = response.id
+    * def UserName = response.name
 
 

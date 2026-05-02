@@ -7,13 +7,17 @@ Feature: Delete Product by Id
   #Delete Product by ID
   Scenario: Delete product by id
 
-    Given path 'users',84
+    * def productCreate = call read('classpath:features/products/post.feature')
+    * def idProduct = productCreate.IdProduct
+
+
+    Given path 'products',idProduct
     When method DELETE
-    Then status 400
+    Then status 200
     And match response == 'true'
 
     #Validate id user dont not exist
-    Given path 'users', 84
+    Given path 'products', idProduct
     When method GET
     Then status 400
     And match response.message contains 'Could not find'

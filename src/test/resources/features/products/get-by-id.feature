@@ -8,8 +8,13 @@ Feature: Get product by id
   #Get Product by ID
   Scenario: Get product by id success
 
-    Given path 'products',50
+    * def productCreate = call read('classpath:features/products/post.feature')
+    * def idProduct = productCreate.IdProduct
+    * def title = productCreate.TitleProduct
+
+    Given path 'products',idProduct
     When method GET
     Then status 200
-    And match response.title contains 'iPhone 90.43450444310218705'
+    And match response.title contains title
+
 

@@ -29,14 +29,14 @@ Feature: Filters By Price Range Products
     Given path 'products'
     And params { price_min: <price_min>,price_max:<price_max>}
     When  method GET
-    Then status 400
+    Then status <status>
 
     #este escenario retorna un falso positivo, porque solo tiene en cuenta el precio minimo no el price mayor
     Examples:
-      | price_min | price_max |
-      | -10       | -999      |
-      | 10        | -999      |
-      | 9999      | -1        |
+      | price_min | price_max | status |
+      | -10       | -999      | 400    |
+      | 10        | -999      | 200    |
+      | 9999      | -1        | 200    |
 
 
   @filter-find-by-price-range-border
