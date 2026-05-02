@@ -3,7 +3,7 @@ Feature: Get categories by id
   Background:
     * url baseUrl
 
-  @GetCategorieById
+  @getcategoriebyid
   #Get Categorie by ID
   Scenario: Get categorie by id success
     * def response = call read('classpath:features/categories/post.feature')

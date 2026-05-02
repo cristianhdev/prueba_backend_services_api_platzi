@@ -1,6 +1,6 @@
 Feature: Create categorie
 
-  @CreateNewCategories
+  @createnewcategories
   Scenario: Create categorie success
     * url baseUrl
     * def categorieData = call read('classpath:helpers/categories/create-categorie.feature')

@@ -1,9 +1,9 @@
-Feature: Filters price products
+Feature: Filters By Title Products
 
     Background:
       * url baseUrl
 
- @FilterFindByTitle
+ @filterfindbytitle
   Scenario Outline: Validate find product by title '<title>'
    * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -13,13 +13,13 @@ Feature: Filters price products
     Then status 200
     And match response == '#[]'
     And match each response == productSchema
-    And match each response[*].title contains '<title>'
+    And match each response constains { title: '#? _ = '<title>''}
 
    Examples:
      | read('classpath:data/filters/filter-title-data.json') |  |
 
 
-  @FilterFindByTitleNotExist
+  @filterfindbytitlenotexist
   Scenario Outline: Validate find product by title '<title>' not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 

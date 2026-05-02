@@ -11,7 +11,7 @@ public class TestRunnerFilters {
         String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 
         Runner.path("classpath:features/filters")
-                .tags("@FilterFindByPriceNotProductExist")
+                //.tags("@FilterFindByPriceRangeBorder")
                 .outputDir("Reports/karate-reports_" + timestamp)
                 .outputCucumberJson(true)
                 .parallel(3);

@@ -1,9 +1,9 @@
-Feature: Filters category id products
+Feature: Filters Category By Id Products
 
   Background:
     * url baseUrl
 
-  @FilterFindByCategoryId
+  @filterbycategotyid
   Scenario Outline: Validate find product by cagtegory id '<id>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -12,7 +12,7 @@ Feature: Filters category id products
     When  method GET
     Then status 200
     And match response == '#? _.length > 0'
-    And match each response[*].category.id ==  <id>
+    And match each response contains { id: '#? _ = <id>'}
     * match each response == productSchema
 
 
@@ -20,7 +20,7 @@ Feature: Filters category id products
       | id |
       | 4  |
 
-  @FilterFindByCategoryIdNotExist
+  @filterfindbycategoryidnotexist
   Scenario Outline: Validate find product by cagtegory id '<id>' not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 

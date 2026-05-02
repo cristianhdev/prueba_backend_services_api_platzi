@@ -1,6 +1,6 @@
 Feature: Update categorie by id
 
-  @UpdateCategorie
+  @updatecategorie
   #Update Categorie
   Scenario: Update categorie success
     * url baseUrl

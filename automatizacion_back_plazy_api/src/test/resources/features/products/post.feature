@@ -1,6 +1,6 @@
 Feature: Create product
 
-  @CreateNewProduct
+  @createnewproduct
   #Create Product
   Scenario: Create product success
     * url baseUrl

@@ -5,7 +5,7 @@ Feature: Validate user
   Background:
     * url baseUrl
 
-  @EmailInputValidate
+  @emailinputvalidate
   Scenario Outline: Validate that the  <message>  when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
@@ -19,7 +19,7 @@ Feature: Validate user
       | read('classpath:data/users/error-email-data.json') |
 
 
-  @PasswordInputValid
+  @passwordinputvalid
   Scenario Outline: Validate the <message> when creating a user account
     * def userData =  read('classpath:data/users/user-data.json')
 
@@ -32,7 +32,7 @@ Feature: Validate user
     Examples:
       | read('classpath:data/users/error-password-data.json') |  |
 
-  @DeleterUserByIdNotDoesntExist
+  @deleteruserbyidnotdoesntExist
   #Delete User by id doesn't exist
   Scenario Outline: Delete user by id  doesn't exist
 

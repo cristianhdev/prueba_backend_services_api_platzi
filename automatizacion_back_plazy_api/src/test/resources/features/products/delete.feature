@@ -3,7 +3,7 @@ Feature: Delete Product by Id
   Background:
     * url baseUrl
 
-  @DeleteProductById
+  @deleteproductbyid
   #Delete Product by ID
   Scenario: Delete product by id
 

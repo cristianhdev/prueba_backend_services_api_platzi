@@ -1,6 +1,6 @@
 Feature: Create user
 
-  @CreateNewUser
+  @createnewuser
   #Create User
   Scenario: Create user success
     * url baseUrl

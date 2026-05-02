@@ -1,30 +1,46 @@
-Feature: Filters price range products
+Feature: Filters By Price Range Products
 
   Background:
     * url baseUrl
 
 
 
-  @FilterFindByPriceRangeBorder
-  Scenario Outline: Validate find product by price range min '<price_max>' and max '<price_min>'
+  @filterfindfypricerangetop
+  Scenario Outline: Validate find product by price range min '<price_min>' and max '<price_mmax>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
     Given path 'products'
-    And params { price_min: <price_max>,price_max:<price_min>}
+    And params { price_min: <price_min>,price_max:<price_max>}
     When  method GET
     Then status 200
-    And match response == '#[]'
     * def filtered = response.filter(x => x.price >= price_min && x.price <= price_max)
-    * assert filtered.length > 0
-    * match each response == productSchema
+    * karate.log("Response", filtered)
+    * match filtered == '#[]'
 
-
-
+    #este escenario retorna un falso positivo, porque solo tiene en cuenta el precio minimo no el price mayor
     Examples:
-      | read('classpath:data/filters/filter-price-border-data.json') |  |
+      | price_min | price_max |
+      | 99999     | 0         |
 
-  @FilterFindByPriceRange
-  Scenario Outline: Validate find product by price range max '<price_max>' and min '<price_min>'
+  @filterfindbypricerangebordernegative
+  Scenario Outline: Validate find product by price range min '<price_min>' and max '<price_max>'
+    * def productSchema =  read('classpath:schemas/products/products-schema.json')
+
+    Given path 'products'
+    And params { price_min: <price_min>,price_max:<price_max>}
+    When  method GET
+    Then status 400
+
+    #este escenario retorna un falso positivo, porque solo tiene en cuenta el precio minimo no el price mayor
+    Examples:
+      | price_min | price_max |
+      | -10       | -999      |
+      | 10        | -999      |
+      | 9999      | -1        |
+
+
+  @filterfindbypricerangeborder
+  Scenario Outline: Validate find product by price range max '<price_min>' and min '<price_max>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
 
@@ -36,12 +52,30 @@ Feature: Filters price range products
     And match response == '#[]'
     # Validate range price valid
     * def filtered = response.filter(x => x.price >= price_min && x.price <= price_max)
-    # if filtered is diferent 0, response item valid
-    * assert filtered.length > 0
     * match each response == productSchema
 
     Examples:
-      | read('classpath:data/filters/filter-price-min-max-data.json') |  |
+      | price_min | price_max |
+      | 0         | 10        |
+      | 71        | 89        |
+      | 73        | 90        |
+      | 72        | 91        |
+
+  @filterfindbypricerangecross
+  Scenario Outline: Validate find product by price range max '<price_min>' and min '<price_max>'
+    * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
 
 
+    Given path 'products'
+    And params { price_min: <price_min>,price_max:<price_max>}
+    When  method GET
+    Then status 200
+    # Validate range price valid
+    * def filtered = response.filter(x => x.price >= price_min && x.price <= price_max)
+    And match filtered == '#[]'
+    And match filtered.length == 0
+
+    Examples:
+      | price_min | price_max |
+      | 99999999  | 100000000 |

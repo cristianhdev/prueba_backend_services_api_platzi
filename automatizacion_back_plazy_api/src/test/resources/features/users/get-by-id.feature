@@ -4,7 +4,7 @@ Feature: Get user by id
   Background:
     * url baseUrl
 
-  @GetUserById
+  @getuserbyid
   #Get User by ID
   Scenario: Get user by id success
     * def responseUser = call read('classpath:features/users/post.feature')

@@ -4,7 +4,7 @@ Feature: Get product by id
   Background:
     * url baseUrl
 
-  @GetProductById
+  @getproductbyid
   #Get Product by ID
   Scenario: Get product by id success
 

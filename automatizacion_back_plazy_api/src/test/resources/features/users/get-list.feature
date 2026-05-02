@@ -1,7 +1,7 @@
 Feature: Get list users
 
         #Get List All User
-  @GetAllUsers
+  @getallusers
   Scenario: Get list users
     * def userSchema =  read('classpath:schemas/users/user-schema.json')
     Given url baseUrl

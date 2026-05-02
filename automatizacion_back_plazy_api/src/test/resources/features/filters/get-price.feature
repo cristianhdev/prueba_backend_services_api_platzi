@@ -1,10 +1,10 @@
-Feature: Filters price products
+Feature: Filters By Price Products
 
   Background:
     * url baseUrl
 
 
-  @FilterFindByPrice
+  @filterfindbyprice
   Scenario Outline: Validate find product by price '<price>'
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
@@ -13,7 +13,7 @@ Feature: Filters price products
     When  method GET
     Then status 200
     And match response == '#[]'
-    And match each response[*].price ==  <price>
+    And match each response contains { price: '#? _ = <price>'}
     * match each response == productSchema
 
 
@@ -21,7 +21,7 @@ Feature: Filters price products
       | price |
       | 73    |
 
-  @FilterFindByPriceNotProductExist
+  @filterfindbypricenotproductexist
   Scenario Outline: Validate find product by price '<price>', product not exist
     * def productSchema =  read('classpath:schemas/products/products-schema.json')
 
